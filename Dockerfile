@@ -14,4 +14,4 @@ RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 
 # Run the built JAR (update JAR name if needed)
-CMD ["java", "-jar", "barwinPortfolioBackend-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "target/barwinPortfolioBackend-0.0.1-SNAPSHOT.jar"]
