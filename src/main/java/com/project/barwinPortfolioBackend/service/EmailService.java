@@ -22,8 +22,7 @@ public class EmailService {
             message.setReplyTo(replyTo);
             mailSender.send(message);
         } catch (Exception e) {
-            // Log error or throw custom exception
-            throw new RuntimeException("Failed to send email", e);
+            System.err.println("Email sending failed: " + e.getMessage());
         }
     }
 
