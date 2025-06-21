@@ -14,10 +14,10 @@ public class WebConfig {
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of("*")); // For testing
+        config.setAllowedOrigins(List.of("https://barwin-portfolio.vercel.app/"));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        config.setAllowedHeaders(List.of("*")); // Accept all headers for testing
-        config.setAllowCredentials(false); // Required when using "*"
+        config.setAllowedHeaders(List.of("*"));
+        config.setAllowCredentials(false);
         config.setMaxAge(3600L);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
